@@ -1,1 +1,3 @@
-# FP-PYTHON
+# Using ralational operator in python
+
+Demonstrate relational operator
