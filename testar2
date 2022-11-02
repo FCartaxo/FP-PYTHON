@@ -1,0 +1,9 @@
+print("Qual é o seu número?")
+string = input()
+
+Float = float(string) 
+print("O seu numero é", Float) 
+print(type(Float))
+
+a = float (input ('Introduza um numero para a: '))
+print ('O seu numero é', a)
