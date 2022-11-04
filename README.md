@@ -2,6 +2,4 @@
 
 Demonstrate relational operator
 
-Testing
-
-hi
+1. Count even and odd numbers
