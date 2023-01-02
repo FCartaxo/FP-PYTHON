@@ -1,9 +1,134 @@
-print("Qual é o seu número?")
-string = input()
+#print("Qual é o seu número?")
+#string = input()
 
-Float = float(string) 
-print("O seu numero é", Float) 
-print(type(Float))
+#Float = float(string) 
+#print("O seu numero é", Float) 
+#print(type(Float))
 
-a = float (input ('Introduza um numero para a: '))
-print ('O seu numero é', a)
+#a = float (input ('Introduza um numero para a: '))
+#print ('O seu numero é', a)
+#frase = input()
+#print(frase)
+'''minutos = 17
+evento = 122
+h_evento = evento // 60
+hR_evento = evento -(h_evento * 60)
+print(hR_evento)
+minutos += hR_evento 
+print(minutos)'''
+'''
+horas = int(input("Horas? "))
+minuto = int(input("Minuto? "))
+evento = int(input("Duração? "))
+
+minuto ='''
+'''
+for i in range (10) :
+    valor = int(input("Valor 3: "))
+    if valor < 0:
+        print("Erro: Nada a fazer!")
+numero = -1
+
+if numero < valor:
+    numero = valor2
+    if valor2 > numero:
+        numero = valor3
+        print("Maior =",numero)
+    else:
+        print("Maior =",numero)'''
+
+
+'''
+ano = int(input("Ano? "))
+
+if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
+    print("bissexto")
+else:
+    print("Nao bissexto")
+'''
+'''
+def tensao (corrente,resistencia):
+    r_Eq = 0
+    print("Existe mais que uma resistência? (Nao/Sim) " ,end='')
+    escolha_resis = str(input())
+    while escolha_resis != 'Sim' and escolha_resis != 'Nao' and escolha_resis != 'sim' and escolha_resis != 'nao':
+        print("Input invalido. Insira outra vez!")
+        escolha_resis = str(input())
+    if escolha_resis == 'Sim':
+        print("Quantas: " ,end='')
+        n_resis = int(input())
+        while n_resis <= 0:
+            print("Número de resistências inferior a 1!")
+            print("Quantas: " ,end='')
+            n_resis = int(input())
+        print("Paralelo ou série? (P/S) " ,end='')
+        escolha_direcao = input()
+        while escolha_direcao != 'P' and escolha_direcao != 'S' :
+            print("Input invalido. Insira outra vez!")
+            escolha_direcao = str(input())
+        if escolha_direcao == 'S' or 's':
+            for i in range (n_resis):
+                print("Qual o valor da resistência " ,end='')
+                print(i+1 ,end='')
+                print(": " ,end='')
+                resis = float(input())
+                r_Eq += resis
+            r_Eq += resistencia
+            tesao = r_Eq * corrente
+            print("Tensao =" ,tesao)
+        elif escolha_direcao == 'P' or 'p':
+            for i in range (n_resis):
+                print("Qual o valor da resistência " ,end='')
+                print(i ,end='')
+    elif escolha_resis == 'Nao' or escolha_resis =='nao':
+        tesao = resistencia * corrente
+        print("Tensão = %s" %tesao)
+    else:
+        print("Input inválido")
+
+
+
+print("O que pretende calcular: ")
+print("    1: Tensão;")
+print("    2: Potencia util;")
+print("    3: Energia consumida;")
+print("    4: Leis de Kirchoff;")
+print("    5: Potência reativa;")
+
+escolha = int(input())
+
+if escolha == 1:
+    print("Corrente: " ,end='')
+    corrente = float(input())
+    print("Resistência: " ,end='')
+    resistencia = float(input())
+    tensao(corrente,resistencia)
+
+print("""
+---MWMWMWM---.---MWMWMWM---
+|            |            |
+|            |            |
+_            _            _
+-            -            -
+|            |            |
+|            |            |
+|            Σ            |
+|            Σ            |
+|            Σ            |
+|------------.------------|
+""")
+
+
+R1=5
+R2=3
+
+R_EQ = ((20*5)/20+5)
+R_EQ = 
+'''
+import numpy as np
+
+arr = np.array([[1, 3], [5, 7]])
+
+arr_inv = np.linalg.inv(arr)
+
+print(arr_inv)

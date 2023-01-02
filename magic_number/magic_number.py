@@ -1,4 +1,5 @@
 secret_number = 47
+secret_number2 = 69
 
 print(
 """
