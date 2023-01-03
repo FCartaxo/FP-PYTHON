@@ -1,7 +1,7 @@
 import numpy as np
 import math
 #funcao para calcular a tensao 
-def tensao (corrente,resistencia,):
+def tensao (corrente,resistencia):
     r_Eq = 0
     print("Existe mais que uma resistência? (Nao/Sim) " ,end='')
     escolha_resis = str(input())
@@ -48,8 +48,39 @@ def tensao (corrente,resistencia,):
         print("Input inválido")
 
 #funcao para calcular a potencia util
-def pot_util (corrente2,tensao2):
-    print()
+def pot_util ():
+    print("\nComo pretende calcular:")
+    print("    Opção 1: tensão/corrente")
+    print("    Opção 2: rendimento")
+    print("Escolha: " ,end='')
+    escolha2 = int(input())
+    while escolha2 != 1 and escolha2 != 2:
+        print("Input inválido! Introduza outra vez: " ,end='')
+        escolha2 = int(input())
+    if escolha2 == 1:
+        print("Tensão: " ,end='')
+        tensao2 = float(input())
+        while tensao2 <= 0:
+            print("Tensão inferior a 0! Introduza outra vez: " ,end='')
+            tensao2 = float(input())
+        print("Corrente: " ,end='')
+        corrente2 = float(input())
+        while corrente2 <= 0:
+            print("Corrente inferior a 0! Introduza outra vez: " ,end='')
+            corrente2 = float(input())
+        pot_util_res = tensao2 * corrente2
+        print("Potência útil:" ,pot_util_res)
+    elif escolha2 == 2:
+        print("Rendimento (Maior que 0 e menor que 100%): " ,end='')
+        rend = float(input())
+        while rend <= 0 and rend >= 100:
+            print("Input inválido! Introduza outra vez: " ,end='')
+            rend = float(input())
+        rend /= 100
+        print("Potência total: " ,end='')
+        pot_tot = float(input())
+        pot_util_res = rend * pot_tot
+        print("Potência útil: " ,pot_util_res)
 
 #funcao para o rendimento
 def rendimento ():
@@ -61,21 +92,33 @@ def pot_Reat ():
 
 #funcao para calcular as leis de kirchoff
 def kirchoff():
-    #circuito 1
+    #circuito 1                                   #circuito 2
     print("""
----MWMWMWM---.---MWMWMWM---
-|            |            |
-|            |            |
-_            _            _
--            -            -
-|            |            |
-|            |            |
-|            Σ            |
-|            Σ            |
-|            Σ            |
-|------------.------------|
+-------------●-------------             -----|׀---MWMWMWM----MWMWMWM---
+|            Σ            |             |                             |
+|            Σ            |             |                             |
+|            Σ            |             |                             |
+|            |            |             ●------------MWMWMWM----------●
+_            _            _             |                             |
+-            -            -             |                             |
+|            |            |             -                             ≷
+≷            ≷            ≷             ̅                              ≷
+≷            ≷            ≷             |                             ≷
+≷            ≷            ≷             ≷                             |
+|            |            |             ≷                             |
+---MWMWMWM---●---MWMWMWM---             ≷                             |
+         circuito 1                     -------׀|-----MWMWMWM----------
+                                                    circuito 2
 """)
-    #circuito 2
+    print("Escolha: " ,end='')
+    escolha5 = int(input())
+    if escolha5 == 1:
+        print("1")
+    elif escolha5 == 2:
+        print("2")
+    else:
+        print("Escolha uma das opções!")
+    
 
 #MENU DA CALCULADORA
 print("\n   CALCULADORA DE CIRCUITOS")
@@ -95,16 +138,13 @@ if escolha == 1:
     resistencia = float(input())
     tensao(corrente,resistencia)
 elif escolha == 2:
-    print("Corrente: " ,end='')
-    corrente2 = float(input())
-    print("tensao: " ,end='')
-    tensao2 = float(input())
-    pot_util(corrente2,tensao2)
+    pot_util()
 elif escolha == 3:
     print()
 elif escolha == 4:
     print()
 elif escolha == 5:
-    print()
+    print("Pretende aplicar as leis de Kirchoff em qual circuito?")
+    kirchoff()
 else:
     print("Escolha uma das opções!")
