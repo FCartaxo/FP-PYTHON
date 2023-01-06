@@ -1,3 +1,7 @@
+import numpy as np
+import os
+import math
+import time
 #print("Qual é o seu número?")
 #string = input()
 
@@ -116,6 +120,12 @@ _            _            _
 |            Σ            |
 |            Σ            |
 |------------.------------|
+
+
+І ˡ ǀ ı ׀ ⃝ꟾ
+
+|׀
+
 """)
 
 
@@ -124,11 +134,82 @@ R2=3
 
 R_EQ = ((20*5)/20+5)
 R_EQ = 
-'''
+
 import numpy as np
 
-arr = np.array([[1, 3], [5, 7]])
+arr = np.array([[1, 1, 1], [2, -3, 0], [0, -3, 3]])
+arr2 = np.array([0, 2, 3])
 
-arr_inv = np.linalg.inv(arr)
+arr_inv = np.linalg.inv(arr)   #calculo matriz inversa
+
+resultado = arr_inv.dot(arr2)  #calculo do resultado
 
 print(arr_inv)
+print()
+print(resultado)
+
+#                   5       20      5
+print("""
+-------------------------------------
+                    |       |       |
+                    |       |       |
+                    ≷       ≷      ≷
+                    ≷       ≷      ≷
+                    ≷       ≷      ≷
+                    |       |       |
+                    |       |       |
+-------------------------------------
+""")
+
+print("""
+-----MWMWMWM-----MWMWMWM----
+                           |
+                           |
+                           ≷
+                           ≷     #esquema da representacao da primeira funcao
+                           ≷
+                           |
+                           |
+-----MWMWMWM-----MWMWMWM----
+""")
+
+
+resistencias = []
+
+prim_resis = float(input("Primeira: "))
+quantas = int(input("Quantas: "))
+r_Eq = prim_resis
+
+for i in range (quantas):
+    valor_resis= float(input("Valor da resis: "))
+    resistencias.append(valor_resis)
+    r_Eq = (r_Eq * resistencias[i]) / (r_Eq + resistencias[i])
+rend = float(input("Rend: "))
+while rend < 0 or rend > 100:                                    #ERRADO NAO SEI PORQUE
+    print("Input inválido! Introduza outra vez: " ,end='')
+    rend = float(input("Rend: "))
+
+
+[1, 0, 0, -1, 0, -1]        [0]
+[-1, 0, 0, 1, -1, 0]        [0]
+[0, -1, 1, 0, 0, -1]        [0]
+[-7.3, 0, 0, -2.6, 0, 0]    [12]
+[0, 0, 2.35, -2.6, -3.5, 0] [-1.5]
+[0, -2.8, -2.35, 0, 0, 0]   [10.5]
+'''
+
+print([[1, 0, 0, -1, 0, -1],
+       [-1, 0, 0, 1, -1, 0],
+       [0, -1, 1, 0, 0, -1],
+       [-7.3, 0, 0, -2.6, 0, 0],
+       [0, 0, 2.35, -2.6, -3.5, 0],
+       [0, -2.8, -2.35, 0, 0, 0]])
+#print([0, 0, 0, 12, -1.5, 10.5])
+#
+#array1 = [[1, 0, 0, -1, 0, -1], [-1, 0, 0, 1, -1, 0], [0, -1, 1, 0, 0, -1], [-7.3, 0, 0, -2.6, 0, 0], [0, 0, 2.35, -2.6, -3.5, 0], [0, -2.8, -2.35, 0, 0, 0]]
+#array2 = [0, 0, 0, 12, -1.5, 10.5]
+#
+#array1_inv = np.linalg.inv(array1)
+#resultado = array1_inv.dot(array2)
+#
+#print(resultado)
