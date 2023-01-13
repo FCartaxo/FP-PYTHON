@@ -269,16 +269,16 @@ _            _            _             |                             |        â
         resultado = array1_inv.dot(array2)
 
         limpar()
-
+        print(resultado)
         for i in range (3):
             if resultado[i] < 0:
                 resultado[i] *= -1
-                resultado[i] = round(resultado[i], 2)
-                print("Corrente " ,end='')
-                print(i+1 ,end='')
-                print(": " ,end='')
-                print(resultado[i] ,end='A')
-                print()
+            resultado[i] = round(resultado[i], 2)
+            print("Corrente " ,end='')
+            print(i+1 ,end='')
+            print(": " ,end='')
+            print(resultado[i] ,end='A')
+            print()
 
     elif escolha5 == 2:
         for i in range (3):
@@ -313,16 +313,16 @@ _            _            _             |                             |        â
         resultado = array1_inv.dot(array2)
 
         limpar()
-
+        print(resultado)
         for i in range (3):
             if resultado[i] < 0:
                 resultado[i] *= -1
-                resultado[i] = round(resultado[i], 2)
-                print("Corrente " ,end='')
-                print(i+1 ,end='')
-                print(": " ,end='')
-                print(resultado[i] ,end='A')
-                print()
+            resultado[i] = round(resultado[i], 2)
+            print("Corrente " ,end='')
+            print(i+1 ,end='')
+            print(": " ,end='')
+            print(resultado[i] ,end='A')
+            print()
 
     elif escolha5 == 3:
         for i in range (5):
@@ -365,16 +365,18 @@ _            _            _             |                             |        â
 
         limpar()
 
+        print(resultado)
+
         for i in range (6):
             if resultado[i] < 0:
                 resultado[i] *= -1
-                resultado[i] = round(resultado[i], 2)
-                print("Corrente " ,end='')
-                print(i+1 ,end='')
-                print(": " ,end='')
-                print(resultado[i] ,end='A')
-                print()
-
+            resultado[i] = round(resultado[i], 2)
+            print("Corrente " ,end='')
+            print(i+1 ,end='')
+            print(": " ,end='')
+            print(resultado[i] ,end='A')
+            print()
+                
 #MENU DA CALCULADORA
 limpar()
 print("\033[1;36m   CALCULADORA DE CIRCUITOS\033[m")
@@ -436,4 +438,3 @@ elif escolha == 5:
 else:
     time.sleep(0.5)
     print("\033[0;31mEscolha uma das opÃ§Ãµes!\033[m")
-    
