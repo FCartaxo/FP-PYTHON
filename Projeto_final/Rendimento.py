@@ -5,7 +5,7 @@ def rendimento (escolha3):
         while pot_util3 < 0:
             print("\033[0;31mPotência útil inferior a 0! Introduza outra vez: \033[m" ,end='')
             pot_util3 = float(input())
-        pot_total = float(input("Potência útil (em Watts): "))
+        pot_total = float(input("Potência total (em Watts): "))
         while pot_total < 0:
             print("\033[0;31mPotência total inferior a 0! Introduza outra vez: \033[m" ,end='')
             pot_total = float(input())
@@ -38,3 +38,4 @@ def rendimento (escolha3):
         rend3 *= 100
         rend3 = round(rend3, 1)
         print("Rendimento =" , rend3, end='%')
+exit()

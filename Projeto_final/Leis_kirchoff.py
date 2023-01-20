@@ -169,3 +169,4 @@ _            _            _             |                             |        â
             print(": " ,end='')
             print(resultado[i] ,end='A')
             print()
+exit()

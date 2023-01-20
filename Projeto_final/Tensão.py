@@ -50,5 +50,3 @@ def tensao (corrente,resistencia):
     elif escolha_resis == 'Nao' or escolha_resis =='nao':
         tensao = resistencia * corrente
         print("Tensão = " ,tensao ,end=' V')
-    #else:
-    #    print("\033[0;31mInput inválido\033[m")

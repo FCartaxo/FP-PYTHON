@@ -24,3 +24,4 @@ def pot_util (escolha2):
         pot_tot = float(input())
         pot_util_res = rend * pot_tot
         print("Potência útil = " ,pot_util_res ,end=' W')
+exit()
