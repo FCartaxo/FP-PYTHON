@@ -22,6 +22,8 @@ def pot_util (escolha2):
         rend /= 100                                              #transforma em percentagem
         print("Potência total (em Watts): " ,end='')
         pot_tot = float(input())
+        while pot_tot <= 0:
+            print("\033[0;31mCorrente inferior a 0! Introduza outra vez: \033[m" ,end='')
+            pot_tot = float(input())
         pot_util_res = rend * pot_tot
         print("Potência útil = " ,pot_util_res ,end=' W')
-exit()

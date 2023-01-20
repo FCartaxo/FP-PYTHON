@@ -1,4 +1,3 @@
-
 #1 funcao para calcular a tensao 
 def tensao (corrente,resistencia):
     r_Eq = 0

@@ -22,7 +22,7 @@ _            _            _             |                             |        �
 |            |            |             ≷                             |        |                   |             |                 |
 ---MWMWMWM---●---MWMWMWM---             ≷                             |        |                   |             |                 |
          circuito 1                     -------׀|-----MWMWMWM----------        ---׀|---MWMWMWM-----●---MWMWMWM---●------------------
-                                                    circuito 2                                        circuito3
+                                                    circuito 2                                        circuito 3
 """)
     lista_eletro = []                  #lista para armazenar as forças eletromotriz
     lista_resistencia = []             #lista para armazenar as resistências
@@ -169,4 +169,3 @@ _            _            _             |                             |        �
             print(": " ,end='')
             print(resultado[i] ,end='A')
             print()
-exit()

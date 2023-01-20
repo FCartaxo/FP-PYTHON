@@ -25,7 +25,7 @@ def rendimento (escolha3):
         while corrente3 <= 0:
             print("\033[0;31mCorrente inferior a 0! Introduza outra vez: \033[m" ,end='')
             corrente3 = float(input())
-        f_motriz3 = float(input("Corrente (em Volts): "))
+        f_motriz3 = float(input("Força eletromotriz (em Volts): "))
         while f_motriz3 <= 0:
             print("\033[0;31mForça eletromotriz inferior a 0! Introduza outra vez: \033[m" ,end='')
             f_motriz3 = float(input())
@@ -38,4 +38,3 @@ def rendimento (escolha3):
         rend3 *= 100
         rend3 = round(rend3, 1)
         print("Rendimento =" , rend3, end='%')
-exit()

@@ -80,4 +80,3 @@ def pot_Reat (escolha4):
             q = x * (corrente4 ** 2)
             q = round(q,2)
             print("Valor da potência reativa = " ,q ,end=' VAr')
-exit()

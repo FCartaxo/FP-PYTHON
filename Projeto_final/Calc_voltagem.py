@@ -1,10 +1,9 @@
-import numpy as np
 import os
 import time
-import Tensão
-import Potência_Util
+import Tensao
+import Potencia_Util
 import Rendimento
-import Potência_reativa
+import Potencia_reativa
 import Leis_kirchoff
 
 def limpar():
@@ -41,7 +40,7 @@ if escolha == 1:
         corrente = float(input())
         print("Resistência (em Ohms): " ,end='')
         resistencia = float(input())
-        Tensão.tensao(corrente,resistencia)
+        Tensao.tensao(corrente,resistencia)
         #break
 elif escolha == 2:
         limpar()
@@ -54,7 +53,7 @@ elif escolha == 2:
         while escolha2 != 1 and escolha2 != 2:
             print("\033[0;31mInput inválido! Introduza outra vez: \033[m" ,end='')
             escolha2 = int(input())
-        Potência_Util.pot_util(escolha2)
+        Potencia_Util.pot_util(escolha2)
         
 elif escolha == 3:
         limpar()
@@ -77,7 +76,7 @@ elif escolha == 4:
         while escolha4 != 1 and escolha4 != 2 and escolha4 != 3:
             print("\033[0;31mInput inválido! Introduza outra vez: \033[m" ,end='')
             escolha4 = int(input())
-        Potência_reativa.pot_Reat(escolha4)
+        Potencia_reativa.pot_Reat(escolha4)
         
 elif escolha == 5:
         limpar()
